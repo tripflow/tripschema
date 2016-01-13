@@ -1,7 +1,7 @@
 COFFEEC = coffee
 SCHEMA = $(SRC:src/%.coffee=lib/%.js)
 
-%.js: %.coffee
-  $(COFFEEC) -bc $<
+doc:
+	./node_modules/mdschema/bin/mdschema -o Reference.md
 
 all: scripts

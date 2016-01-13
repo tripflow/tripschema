@@ -21,8 +21,8 @@ Flight schema
 Property | Type | Description | Example
 ---- | ---- | ---- | ---- | ----
 **ident** | *String or Object [Flight.ident](#Flight.ident)* | Flight ID - Flight identification. | `"DY1502"`
-**date** | *String* | Departure date - ISO 8601 format: `YY-MM-DDDD`. | `"2015-03-27"`
-**date_arrival** | *String* | Arrival date - Only if its overnight night. ISO 8601 format: `YY-MM-DDDD`. | `"2015-03-28"`
+**date** | *String* | Departure date - ISO 8601 format: &#x60;YY-MM-DDDD&#x60;. | `"2015-03-27"`
+**date_arrival** | *String* | Arrival date - Only if its overnight night. ISO 8601 format: &#x60;YY-MM-DDDD&#x60;. | `"2015-03-28"`
 **airline** | *Object [Flight.airline](#Flight.airline)* | Airline | `{"iata":"DY","icao":"NAX","name":"Norwegian"}`
 **orig** | *Object [Flight.airport](#Flight.airport)* | Origin - Information about origin airport. | `{"icao":"ENGM","name":"Oslo"}`
 **dest** | *Object [Flight.airport](#Flight.airport)* | Destination - Information about destination airport. | `{"iata":"PRG","name":"Prague"}`
@@ -315,6 +315,7 @@ Property | Type | Description | Example
 **webcams** | *Array [Object [Airport.webcams](#Airport.webcams)]* | Webcams - Webcams at airport. | `[{"terminal":"T1","fps":0.33,"resolution":"704x480","raw_url":"http://apollo.prg.aero/kamera/image.jpg","url":"http://www.prg.aero/en/prague-airport/webcam/"}]`
 **apps** | *Array [Object [Airport.apps](#Airport.apps)]* | Applications | `[{"platform":"android","id":"cz.sw.upis.upisand","url":"https://play.google.com/store/apps/details?id=cz.sw.upis.upisand"},{"platform":"ios","id":581517376,"url":"https://itunes.apple.com/us/app/prague-airport-letiste-praha/id581517376"}]`
 **features** | *Array [string]* | Features - Airport features. | `["free-wifi","open-nonstop"]`
+**security** | ** | Security | `{"rffs_cat":10}`
 **opening_hours** | *Array [Object [Airport.opening_hours](#Airport.opening_hours)]* | Opening hours | `[{"days":"all","times":"00:00-24:00"}]`
 
 #### Example
@@ -362,6 +363,9 @@ Property | Type | Description | Example
     "free-wifi",
     "open-nonstop"
   ],
+  "security": {
+    "rffs_cat": 10
+  },
   "terminals": [
     {
       "name": "Terminal 1",
@@ -511,6 +515,7 @@ Property | Type | Description | Example
 ---- | ---- | ---- | ---- | ----
 **iata** | *String* | IATA code - 3-letter IATA code of airport. | `"PRG"`
 **icao** | *String* | ICAO code - 3-letter ICAO code of airport. | `"LKPR"`
+**geonames** | *Number* | GeoNames ID | `6299654`
 
 
 #### Example
@@ -563,12 +568,17 @@ Property | Type | Description | Example
 **length** | *Number* | Length - Runway length in feets. | `null`
 **size** | *String* | Size - Runway dimensions in feets (length x width). | `"12191x197"`
 **surface** | *String* | Surface - Type of surface. | `"concrete"`
+**features** | *String* |  | `null`
 **active** | *Boolean* | Active? | `true`
 
 #### Enum `surface`
 * concrete
 * asphaltic-concrete
 * asphalt
+#### Enum `features`
+* ils1
+* ils2
+* ils3
 
 #### Example
 ```javascript

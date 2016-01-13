@@ -1,24 +1,27 @@
 {
-  "name": "aeroschema",
+  "name": "tripschema",
   "version": "0.0.1",
-  "description": "Open Air Transport Schema Specification (draft)",
+  "description": "Open Trip Schema Specification (draft)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/burningtree/aeroschema.git"
+    "url": "https://github.com/tripflow/tripschema.git"
   },
   "author": "Jan Stránský <jan.stransky@arnal.cz>",
   "license": "CC-BY-SA-4.0",
   "bugs": {
-    "url": "https://github.com/burningtree/aeroschema/issues"
+    "url": "https://github.com/tripflow/tripschema/issues"
   },
-  "homepage": "https://github.com/burningtree/aeroschema",
+  "homepage": "https://github.com/tripflow/tripschema",
   "dependencies": {
     "grunt": "^0.4.5",
     "grunt-tv4": "^0.4.1",
     "grunt-yaml": "^0.4.1"
+  },
+  "devDependencies": {
+    "mdschema": "git+https://github.com/tripflow/mdschema.git"
   }
 }
