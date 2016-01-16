@@ -1,4 +1,4 @@
-name: 'Aeroschema Reference'
+name: 'Tripschema Reference'
 output: './doc'
 schemas:
   - src: "schema/flight.json"

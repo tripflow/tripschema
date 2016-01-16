@@ -1,0 +1,182 @@
+{
+  "title": "Booking",
+  "description": "Booking or reservation",
+  "id": "http://tripschema.org/schema/booking#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "ident": {
+      "title": "Booking IDs",
+      "type": "object",
+      "description": "Booking identificators",
+      "properties": {
+        "pnr": {
+          "type": "string",
+          "title": "PNR code",
+          "description": "Standart six char code"
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "title": "Booking status",
+      "enum": [
+        "confirmed",
+        "pending",
+        "cancelled"
+      ]
+    },
+    "price": {
+      "type": "object",
+      "title": "Price summary",
+      "properties": {
+        "value": {
+          "type": "number",
+          "title": "Price value"
+        },
+        "currency": {
+          "type": "string",
+          "title": "Currency"
+        }
+      }
+    },
+    "payments": {
+      "type": "array",
+      "title": "Payments",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "title": "Payment type",
+            "enum": [
+              "card",
+              "bank_transfer"
+            ]
+          },
+          "value": {
+            "type": "number",
+            "title": "Payment value"
+          },
+          "curreny": {
+            "type": "string",
+            "title": "Payment currency"
+          },
+          "card_no": {
+            "type": "string",
+            "title": "Payment card number"
+          },
+          "account_name": {
+            "type": "string",
+            "title": "Payment account name"
+          },
+          "status": {
+            "type": "string",
+            "title": "Payment status",
+            "enum": [
+              "approved",
+              "declined",
+              "pending"
+            ]
+          },
+          "dcc": {
+            "type": "boolean",
+            "title": "Payment use DCC?"
+          },
+          "dcc_rate": {
+            "type": "number",
+            "title": "DCC Rate"
+          },
+          "dcc_currency": {
+            "type": "string",
+            "title": "DCC Currency"
+          }
+        }
+      }
+    },
+    "contacts": {
+      "type": "array",
+      "title": "Contacts",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "title": "Type of contact",
+            "enum": [
+              "private",
+              "business"
+            ]
+          },
+          "email": {
+            "type": "string",
+            "title": "Email"
+          },
+          "name": {
+            "type": "object",
+            "title": "Name",
+            "properties": {
+              "title": {
+                "type": "string",
+                "title": "Name title"
+              },
+              "first": {
+                "type": "string",
+                "title": "Name first"
+              },
+              "middle": {
+                "type": "string",
+                "title": "Name middle"
+              },
+              "last": {
+                "type": "string",
+                "title": "Name last"
+              },
+              "suffix": {
+                "type": "string",
+                "title": "Name suffix"
+              }
+            }
+          },
+          "phones": {
+            "type": "array",
+            "title": "Phones",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "title": "Type of phone",
+                  "enum": [
+                    "home",
+                    "work"
+                  ]
+                },
+                "value": {
+                  "type": "number",
+                  "title": "Phone number"
+                }
+              }
+            }
+          },
+          "city": {
+            "type": "string",
+            "title": "City"
+          },
+          "zip": {
+            "type": "string",
+            "title": "Postal code"
+          },
+          "country": {
+            "type": "string",
+            "title": "Country"
+          },
+          "locale": {
+            "type": "string",
+            "title": "Contact locale"
+          }
+        }
+      }
+    }
+  }
+}

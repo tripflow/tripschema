@@ -1,4 +1,4 @@
-# Aeroschema Reference
+# Tripschema Reference
 
  * [Flight](#Flight)
  * [Airport](#Airport)

@@ -26,7 +26,8 @@ All schemas are defined in [JSON Schema](http://json-schema.org) format and can 
 - **BoardingPass** - planned
 - **[Flight](Reference.md#flight)** ([json](schema/flight.json))
 - **Incident** - planned
-- **Reservation** - planned
+- **[Booking](Reference.md#booking)** ([json](schema/booking.json))
+- **[Accomodation](Reference.md#accomodation)** ([json](schema/accomodation.json))
 
 ## Resources
 
