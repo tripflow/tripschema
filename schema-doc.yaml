@@ -5,3 +5,5 @@ schemas:
     example: "examples/flight.json"
   - src: "schema/airport.json"
     example: "examples/airport.json"
+  - src: "schema/booking.json"
+    example: "examples/booking.json"

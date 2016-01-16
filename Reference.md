@@ -2,6 +2,7 @@
 
  * [Flight](#Flight)
  * [Airport](#Airport)
+ * [Booking](#Booking)
 
 ## Flight
 
@@ -809,6 +810,201 @@ Property | Type | Description | Example
   "days": "all",
   "times": "00:00-24:00"
 }
+```
+
+## Booking
+
+Booking or reservation
+
+* [Booking](#Booking)
+  * [Booking.ident](#Booking.ident)
+  * [Booking.price](#Booking.price)
+  * [Booking.payments](#Booking.payments)
+  * [Booking.contacts](#Booking.contacts)
+  * [Booking.contacts.name](#Booking.contacts.name)
+  * [Booking.contacts.phones](#Booking.contacts.phones)
+
+Property | Type | Description | Example
+---- | ---- | ---- | ---- | ----
+**ident** | *Object [Booking.ident](#Booking.ident)* | Booking IDs - Booking identificators | `{"pnr":"LSSK8E"}`
+**status** | *String* | Booking status | `"confirmed"`
+**price** | *Object [Booking.price](#Booking.price)* | Price summary | `{"value":12088,"currency":"HUF"}`
+**payments** | *Array [Object [Booking.payments](#Booking.payments)]* | Payments | `null`
+**contacts** | *Array [Object [Booking.contacts](#Booking.contacts)]* | Contacts | `{"email":"jan.stransky@arnal.cz"}`
+
+#### Example
+```javascript
+{
+  "ident": {
+    "pnr": "LSSK8E"
+  },
+  "flights": {
+    "0": {
+      "flight": "FR2620",
+      "date": "03-02-2016",
+      "airline": {
+        "iata": "FR"
+      },
+      "orig": {
+        "iata": "MLA"
+      },
+      "dest": {
+        "iata": "TRN"
+      },
+      "times": {
+        "std": 770,
+        "sta": 895
+      }
+    },
+    "1": {
+      "flight": "FR2621",
+      "date": "06-02-2016",
+      "airline": {
+        "iata": "FR"
+      },
+      "orig": {
+        "iata": "TRN"
+      },
+      "dest": {
+        "iata": "MLA"
+      },
+      "times": {
+        "std": 920,
+        "sta": 1030
+      }
+    }
+  },
+  "passengers": {
+    "0": {
+      "firstname": "Zuzana",
+      "lastname": "Vlckova"
+    }
+  },
+  "return": true,
+  "paid": true,
+  "status": "confirmed",
+  "price": {
+    "value": 12088,
+    "currency": "HUF"
+  },
+  "payment": {
+    "type": "card",
+    "card_type": "Mastercard Debit",
+    "card_suffix": 4790
+  },
+  "contacts": {
+    "email": "jan.stransky@arnal.cz"
+  },
+  "created": "2015-11-08T21:30+2"
+}
+```
+
+### Booking.ident
+
+Booking identificators
+
+Property | Type | Description | Example
+---- | ---- | ---- | ---- | ----
+**pnr** | *String* | PNR code - Standart six char code | `"LSSK8E"`
+
+
+#### Example
+```javascript
+{
+  "pnr": "LSSK8E"
+}
+```
+### Booking.price
+
+Property | Type | Description | Example
+---- | ---- | ---- | ---- | ----
+**value** | *Number* | Price value | `12088`
+**currency** | *String* | Currency | `"HUF"`
+
+
+#### Example
+```javascript
+{
+  "value": 12088,
+  "currency": "HUF"
+}
+```
+### Booking.payments
+
+Property | Type | Description | Example
+---- | ---- | ---- | ---- | ----
+**type** | *String* | Payment type | `null`
+**value** | *Number* | Payment value | `null`
+**curreny** | *String* | Payment currency | `null`
+**card_no** | *String* | Payment card number | `null`
+**account_name** | *String* | Payment account name | `null`
+**status** | *String* | Payment status | `null`
+**dcc** | *Boolean* | Payment use DCC? | `null`
+**dcc_rate** | *Number* | DCC Rate | `null`
+**dcc_currency** | *String* | DCC Currency | `null`
+
+#### Enum `type`
+* card
+* bank_transfer
+#### Enum `status`
+* approved
+* declined
+* pending
+
+#### Example
+```javascript
+null
+```
+### Booking.contacts
+
+Property | Type | Description | Example
+---- | ---- | ---- | ---- | ----
+**type** | *String* | Type of contact | `null`
+**email** | *String* | Email | `null`
+**name** | *Object [Booking.contacts.name](#Booking.contacts.name)* | Name | `null`
+**phones** | *Array [Object [Booking.contacts.phones](#Booking.contacts.phones)]* | Phones | `null`
+**city** | *String* | City | `null`
+**zip** | *String* | Postal code | `null`
+**country** | *String* | Country | `null`
+**locale** | *String* | Contact locale | `null`
+
+#### Enum `type`
+* private
+* business
+
+#### Example
+```javascript
+null
+```
+### Booking.contacts.name
+
+Property | Type | Description | Example
+---- | ---- | ---- | ---- | ----
+**title** | *String* | Name title | `null`
+**first** | *String* | Name first | `null`
+**middle** | *String* | Name middle | `null`
+**last** | *String* | Name last | `null`
+**suffix** | *String* | Name suffix | `null`
+
+
+#### Example
+```javascript
+null
+```
+### Booking.contacts.phones
+
+Property | Type | Description | Example
+---- | ---- | ---- | ---- | ----
+**type** | *String* | Type of phone | `null`
+**value** | *Number* | Phone number | `null`
+
+#### Enum `type`
+* home
+* work
+
+#### Example
+```javascript
+null
 ```
 
 
