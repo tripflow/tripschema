@@ -16,18 +16,29 @@ This project is open source, so any suggestions and improvements are welcome.
 ### Schemas
 All schemas are defined in [JSON Schema](http://json-schema.org) format and can also be used separately (stored in [`schema/`](/schema) directory).
 
-- **Aircraft** - planned
-- **AircraftModel** - planned
-- **AircraftSeating** - planned
-- **Airline** - in progress
-- **AirlineStatistics** - planned
-- **[Airport](Reference.md#airport)** ([json](schema/airport.json))
-- **AirportStatistics** - planned
-- **BoardingPass** - planned
-- **[Flight](Reference.md#flight)** ([json](schema/flight.json))
-- **Incident** - planned
-- **[Booking](Reference.md#booking)** ([json](schema/booking.json))
-- **[Accomodation](Reference.md#accomodation)** ([json](schema/accomodation.json))
+- **Place**
+  - **[TransportStructure](Reference.md#transportstructure)** ([json](schema/transportstructure.json))
+    - **[Airport](Reference.md#airport)** ([json](schema/airport.json))
+  - **[Accomodation](Reference.md#accomodation)** ([json](schema/accomodation.json))
+- **Organization**
+  - **[Operator](Reference.md#operator)** ([json](schema/operator.json))
+    - **Airline** - in progress
+  - **[Broker](Reference.md#broker)** ([json](schema/broker.json))
+- **Event**
+  - **TransportSegment**
+    - **[Flight](Reference.md#flight)** ([json](schema/flight.json))
+  - **Incident**
+- **Vehicle**
+  - **Aircraft**
+- **VehicleModel**
+  - **AircraftModel**
+- **Other**
+  - **[Reservation](Reference.md#reservation)** ([json](schema/reservation.json))
+  - **BoardingPass** - planned
+  - **AircraftSeating**
+- **Statistics**
+  - **AirlineStatistics**
+  - **AirportStatistics**
 
 ## Resources
 
