@@ -1,0 +1,128 @@
+{
+  "title": "Place",
+  "description": "Place schema",
+  "id": "http://tripschema.org/schema/place#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Name",
+      "description": "Name of place.",
+      "type": "string"
+    },
+    "coords": {
+      "title": "Coordinates",
+      "description": "Coordinates of place.",
+      "$ref": "#/definitions/coords"
+    },
+    "website": {
+      "title": "Website",
+      "description": "Airport website.",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "url": {
+              "title": "URL",
+              "type": "string"
+            },
+            "url_mobile": {
+              "title": "Mobile URL",
+              "description": "URL to mobile version of web.",
+              "type": "string"
+            },
+            "mobile_ready": {
+              "title": "Mobile ready?",
+              "type": "boolean"
+            },
+            "languages": {
+              "title": "Languages",
+              "description": "Website languages.",
+              "type": "array",
+              "items": {
+                "title": "Language",
+                "type": "object",
+                "properties": {
+                  "lang": {
+                    "type": "string",
+                    "pattern": "^[a-z]{2}(\\-[a-z]{2})?$"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "url_mobile": {
+                    "type": "string"
+                  },
+                  "primary": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            },
+            "features": {
+              "title": "Features",
+              "description": "Website features.",
+              "type": "array",
+              "items": {
+                "title": "Feature",
+                "type": "string",
+                "enum": [
+                  "sms-info",
+                  "webcam",
+                  "waiting-times",
+                  "map"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "refs": {
+      "title": "References",
+      "type": "array",
+      "items": {
+        "title": "Reference",
+        "type": "object",
+        "properties": {
+          "type": {
+            "title": "Type",
+            "description": "Type of reference.",
+            "type": "string"
+          },
+          "value": {
+            "title": "Reference value",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              }
+            ]
+          },
+          "url": {
+            "title": "URL of reference",
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "coords": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "number"
+      }
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

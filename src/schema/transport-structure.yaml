@@ -1,0 +1,214 @@
+title: Transport Structure
+description: Transport Structure Schema
+id: "http://tripschema.org/schema/transport-structure#"
+$schema: "http://json-schema.org/draft-04/schema#"
+type: object
+allOf:
+  - $ref: "http://tripschema.org/schema/place#"
+  - properties:
+      type:
+        title: Type
+        description: Type of transport structure.
+        type: string
+        enum:
+          - airport
+          - railway-station
+          - bus-stop
+      aliases:
+        title: Aliases
+        description: Name aliases of airport.
+        type: array
+        items:
+          type: object
+          properties:
+            lang:
+              title: Language
+              description: Three-letter ISO 639-3 language code.
+              type: string
+            value:
+              title: Value
+              type: string
+            preferred:
+              title: Preferred
+              type: boolean
+            historical:
+              title: Historical
+              description: Historical names.
+              type: boolean
+            colloquial:
+              title: Colloquial
+              type: boolean
+      domain:
+        title: Internet domain
+        description: Internet domain of airport.
+        type: string
+      continent:
+        title: Continent
+        description: Continent where is airport located.
+        type: string
+        enum:
+          - AF  # Africa
+          - AS  # Asia
+          - EU  # Europe
+          - NA  # North America
+          - SA  # South America
+          - OC  # Oceania
+          - AN  # Antarctica
+      region:
+        title: Region
+        description: ISO 3166-2 region code
+        type: string
+        pattern: "^[A-Z]{2}-[A-Z]{2}$"
+      country:
+        title: Country
+        description: ISO 3166-1 alpha-3 code
+        type: string
+        pattern: "^[A-Z]{3}$"
+      served:
+        title: Served
+        description: Cities/locations served by this airport.
+        type: array
+        items:
+          type: object
+          properties:
+            name:
+              title: Name
+              description: Name of city/location.
+              type: string
+            geonames:
+              title: Geonames ID
+              type: number
+      timezone:
+        title: Timezone
+        description: tz database code.
+        type: string
+      coords:
+        title: Coordinates
+        description: Airport location coordinates.
+        $ref: "http://tripschema.org/schema/place#/definitions/coords"
+      elevation:
+        title: Elevation
+        type: number
+        description: Elevation of airport in feets.
+      waiting_times:
+        title: Waiting times
+        type: object
+        properties:
+          security:
+            title: Security
+            $ref: "#/definitions/times"
+      webcams:
+        title: Webcams
+        description: Webcams at place.
+        type: array
+        items:
+          title: Webcam
+          type: object
+          properties:
+            name:
+              title: Name
+              type: string
+              description: Name of webcam
+            terminal:
+              title: Terminal
+              type: string
+              description: Terminal name or alias.
+            fps:
+              title: FPS 
+              description: Frames per second.
+              type: number
+            resolution:
+              title: Resolution
+              description: Resolution in pixels.
+              type: string
+              pattern: '^(\d+)x(\d+)$'
+            url:
+              title: URL
+              type: string
+            raw_url:
+              title: Raw URL
+              type: string
+      apps:
+        title: Applications
+        type: array
+        items:
+          title: Application
+          type: object
+          properties:
+            platform:
+              title: Platform
+              description: Platform of application.
+              type: string
+              enum:
+                - ios
+                - android
+                - wp   # windows-phone
+                - firefox
+                - blackberry
+                - linux
+                - osx
+                - windows
+            id:
+              title: ID
+              description: Application ID.
+              oneOf:
+                - type: string
+                - type: number
+            url:
+              title: URL
+              description: Link to application.
+              type: string
+      opening_hours:
+        title: Opening hours
+        type: array
+        items:
+          title: Opening time
+          type: object
+          properties:
+            days:
+              title: Days
+              description: Days in week.
+              type: string
+              pattern:
+                '^(mo|tu|we|th|fr|sa|su|all)(-(mo|tu|we|th|fr|sa|su))?$'
+            times:
+              title: Times
+              description: Opening time.
+              type: string
+              pattern: '^\d{2}:\d{2}\-\d{2}:\d{2}$'
+      features:
+        title: Features
+        description: Transport structure features.
+        type: array
+        items:
+          title: Feature
+          $ref: "#/definitions/features"
+definitions:
+  times:
+    type: array
+    items:
+      type: object
+      properties:
+        terminal:
+          title: Terminal
+          type: string
+        area:
+          title: Area
+          type: string
+        time:
+          $ref: "#/definitions/wait_time"
+  wait_time:
+    title: Waiting time
+    description: Waiting time in minutes.
+    oneOf:
+      - type: string
+        pattern: '^[<>]?\d+$'
+      - type: number
+    description: in minutes
+  features:
+    type: string
+    enum:
+      - free-wifi
+      - payable-wifi
+      - open-nonstop
+      - sleep-forbidden
