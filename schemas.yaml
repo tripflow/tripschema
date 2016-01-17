@@ -10,6 +10,13 @@ Place:
           src: railway-station.json
     Accomodation:
       src: accomodation.json
+      subs:
+        Hotel:
+          src: hotel.json
+        Hostel:
+          src: hostel.json
+        Apartment:
+          src: apartment.json
 Organization:
   src: organization.json
   subs:
