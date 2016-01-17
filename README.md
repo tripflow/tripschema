@@ -31,14 +31,14 @@ All schemas are defined in [JSON Schema](http://json-schema.org) format and can 
   - **Segment**
     - **[Flight](Reference.md#flight)** ([json](schema/flight.json))
   - **Incident**
-- **Vehicle**
-  - **Aircraft**
-- **VehicleModel**
-  - **AircraftModel**
-- **Other**
+- **Document**
   - **[Reservation](Reference.md#reservation)** ([json](schema/reservation.json))
   - **BoardingPass** - planned
+- **Vehicle**
+  - **Aircraft**
   - **AircraftSeating**
+- **VehicleModel**
+  - **AircraftModel**
 - **Statistics**
   - **AirlineStatistics**
   - **AirportStatistics**
