@@ -13,7 +13,7 @@ definitions:
       - asphalt
 allOf:
   - $ref: "http://tripschema.org/schema/place#"
-  - $ref: "http://tripschema.org/schema/transport-structure#"
+  - $ref: "http://tripschema.org/schema/gateway#"
   - properties:
       ident:
         title: Airport ID
@@ -113,7 +113,7 @@ allOf:
             features: 
               title: Features
               description: Terminal features.
-              $ref: "http://tripschema.org/schema/transport-structure#/definitions/features"
+              $ref: "http://tripschema.org/schema/gateway#/definitions/features"
       security:
         title: Security
         properties:

@@ -20,7 +20,7 @@
       "$ref": "http://tripschema.org/schema/place#"
     },
     {
-      "$ref": "http://tripschema.org/schema/transport-structure#"
+      "$ref": "http://tripschema.org/schema/gateway#"
     },
     {
       "properties": {
@@ -146,7 +146,7 @@
               "features": {
                 "title": "Features",
                 "description": "Terminal features.",
-                "$ref": "http://tripschema.org/schema/transport-structure#/definitions/features"
+                "$ref": "http://tripschema.org/schema/gateway#/definitions/features"
               }
             }
           }

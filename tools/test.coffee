@@ -4,7 +4,7 @@ Path = require 'path'
 
 schema = JSON.parse(fs.readFileSync(Path.resolve(__dirname, '../schema/airport.json')))
 ajv.addSchema JSON.parse(fs.readFileSync(Path.resolve(__dirname, '../schema/place.json'))), 'http://tripschema.org/schema/place#'
-ajv.addSchema JSON.parse(fs.readFileSync(Path.resolve(__dirname, '../schema/transport-structure.json'))), 'http://tripschema.org/schema/transport-structure#'
+ajv.addSchema JSON.parse(fs.readFileSync(Path.resolve(__dirname, '../schema/gateway.json'))), 'http://tripschema.org/schema/gateway#'
 
 validate = ajv.compile schema
 data =

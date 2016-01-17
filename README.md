@@ -16,10 +16,10 @@ This project is open source, so any suggestions and improvements are welcome.
 ### Schemas
 All schemas are defined in [JSON Schema](http://json-schema.org) format and can also be used separately (stored in [`schema/`](/schema) directory).
 
-- **Place**
+- **[Place](Reference.md#place)** ([json](schema/place.json))
   - **[Gateway](Reference.md#gateway)** ([json](schema/gateway.json))
     - **[Airport](Reference.md#airport)** ([json](schema/airport.json))
-    - **Railway station**
+    - **RailwayStation**
     - **Port**
     - ..
   - **[Accomodation](Reference.md#accomodation)** ([json](schema/accomodation.json))
