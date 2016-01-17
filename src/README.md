@@ -16,54 +16,7 @@ This project is open source, so any suggestions and improvements are welcome.
 ### Schemas
 All schemas are defined in [JSON Schema](http://json-schema.org) format and can also be used separately (stored in [`schema/`](/schema) directory).
 
-- **[Place](Reference.md#place)** ([json](schema/place.json))
-  - **[Gateway](Reference.md#gateway)** ([json](schema/gateway.json))
-    - **[Airport](Reference.md#airport)** ([json](schema/airport.json))
-    - **[RailwayStation](Reference.md#railwaystation)** ([json](schema/railway-station.json))
-  - **[Accomodation](Reference.md#accomodation)** ([json](schema/accomodation.json))
-- **[Organization](Reference.md#organization)** ([json](schema/organization.json))
-  - **[Operator](Reference.md#operator)** ([json](schema/operator.json))
-    - **[Airline](Reference.md#airline)** ([json](schema/airline.json))
-  - **[Broker](Reference.md#broker)** ([json](schema/broker.json))
-- **[Event](Reference.md#event)** ([json](schema/event.json))
-  - **[Segment](Reference.md#segment)** ([json](schema/segment.json))
-    - **[Flight](Reference.md#flight)** ([json](schema/flight.json))
-  - **[Incident](Reference.md#incident)** ([json](schema/incident.json))
-- **[Document](Reference.md#document)** ([json](schema/document.json))
-  - **[Reservation](Reference.md#reservation)** ([json](schema/reservation.json))
-  - **[BoardingPass](Reference.md#boardingpass)** ([json](schema/boarding-pass.json))
-- **[Vehicle](Reference.md#vehicle)** ([json](schema/vehicle.json))
-  - **[Aircraft](Reference.md#aircraft)** ([json](schema/aircraft.json))
-  - **[AircraftSeating](Reference.md#aircraftseating)** ([json](schema/aircraft-seating.json))
-- **[Statistics](Reference.md#statistics)** ([json](schema/undefined))
-
-
-- **[Place](Reference.md#place)** ([json](schema/place.json))
-  - **[Gateway](Reference.md#gateway)** ([json](schema/gateway.json))
-    - **[Airport](Reference.md#airport)** ([json](schema/airport.json))
-    - **RailwayStation**
-    - **Port**
-    - ..
-  - **[Accomodation](Reference.md#accomodation)** ([json](schema/accomodation.json))
-- **Organization**
-  - **[Operator](Reference.md#operator)** ([json](schema/operator.json))
-    - **[Airline](Reference.md#airline)** ([json](schema/airline.json))
-  - **[Broker](Reference.md#broker)** ([json](schema/broker.json))
-- **Event**
-  - **Segment**
-    - **[Flight](Reference.md#flight)** ([json](schema/flight.json))
-  - **Incident**
-- **Document**
-  - **[Reservation](Reference.md#reservation)** ([json](schema/reservation.json))
-  - **BoardingPass** - planned
-- **Vehicle**
-  - **Aircraft**
-  - **AircraftSeating**
-- **VehicleModel**
-  - **AircraftModel**
-- **Statistics**
-  - **AirlineStatistics**
-  - **AirportStatistics**
+{{{SCHEMAS_INDEX}}}
 
 ## Resources
 

@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "ajv": "^3.3.1",
+    "js-yaml": "^3.5.2",
     "mdschema": "git+https://github.com/tripflow/mdschema.git"
   }
 }

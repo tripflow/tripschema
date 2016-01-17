@@ -1,0 +1,52 @@
+Place:
+  src: place.json
+  subs:
+    Gateway:
+      src: gateway.json
+      subs:
+        Airport:
+          src: airport.json
+        RailwayStation:
+          src: railway-station.json
+    Accomodation:
+      src: accomodation.json
+Organization:
+  src: organization.json
+  subs:
+    Operator:
+      src: operator.json
+      subs:
+        Airline:
+          src: airline.json
+    Broker:
+      src: broker.json
+Event:
+  src: event.json
+  subs:
+    Segment:
+      src: segment.json
+      subs:
+        Flight:
+          src: flight.json
+    Incident:
+      src: incident.json
+Document:
+  src: document.json
+  subs:
+    Reservation:
+      src: reservation.json
+    BoardingPass:
+      src: boarding-pass.json
+Vehicle:
+  src: vehicle.json
+  subs:
+    Aircraft:
+      src: aircraft.json
+    AircraftSeating:
+      src: aircraft-seating.json
+Statistics:
+  AirlineStatistics:
+    src: airline-statistics.json
+  AirportStatistics:
+    src: airport-statistics.json
+          
