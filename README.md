@@ -25,7 +25,7 @@ All schemas are defined in [JSON Schema](http://json-schema.org) format and can 
   - **[Accomodation](Reference.md#accomodation)** ([json](schema/accomodation.json))
 - **Organization**
   - **[Operator](Reference.md#operator)** ([json](schema/operator.json))
-    - **[Airline](Reference.md#airline)** - ([json](schema/airline.json))
+    - **[Airline](Reference.md#airline)** ([json](schema/airline.json))
   - **[Broker](Reference.md#broker)** ([json](schema/broker.json))
 - **Event**
   - **Segment**

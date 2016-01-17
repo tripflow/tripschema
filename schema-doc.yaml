@@ -1,9 +1,13 @@
 name: 'Tripschema Reference'
 output: './doc'
 schemas:
-  - src: "schema/flight.json"
-    example: "examples/flight.json"
+  - src: "schema/place.json"
+    example: "examples/place.json"
+  - src: "schema/gateway.json"
+    example: "examples/gateway.json"
   - src: "schema/airport.json"
     example: "examples/airport.json"
+  - src: "schema/flight.json"
+    example: "examples/flight.json"
   - src: "schema/reservation.json"
     example: "examples/reservation.json"
