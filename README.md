@@ -17,15 +17,18 @@ This project is open source, so any suggestions and improvements are welcome.
 All schemas are defined in [JSON Schema](http://json-schema.org) format and can also be used separately (stored in [`schema/`](/schema) directory).
 
 - **Place**
-  - **[TransportStructure](Reference.md#transportstructure)** ([json](schema/transportstructure.json))
+  - **[Gateway](Reference.md#gateway)** ([json](schema/gateway.json))
     - **[Airport](Reference.md#airport)** ([json](schema/airport.json))
+    - **Railway station**
+    - **Port**
+    - ..
   - **[Accomodation](Reference.md#accomodation)** ([json](schema/accomodation.json))
 - **Organization**
-  - **[TransportOperator](Reference.md#operator)** ([json](schema/operator.json))
+  - **[Operator](Reference.md#operator)** ([json](schema/operator.json))
     - **[Airline](Reference.md#airline)** - ([json](schema/airline.json))
   - **[Broker](Reference.md#broker)** ([json](schema/broker.json))
 - **Event**
-  - **TransportSegment**
+  - **Segment**
     - **[Flight](Reference.md#flight)** ([json](schema/flight.json))
   - **Incident**
 - **Vehicle**
