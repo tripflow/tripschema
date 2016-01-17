@@ -8,6 +8,8 @@ Place:
           src: airport.json
         RailwayStation:
           src: railway-station.json
+        BusTerminal:
+          src: bus-terminal.json  
     Accomodation:
       src: accomodation.json
       subs:
@@ -17,6 +19,8 @@ Place:
           src: hostel.json
         Apartment:
           src: apartment.json
+    Target:
+      src: target.json
 Organization:
   src: organization.json
   subs:
@@ -25,11 +29,15 @@ Organization:
       subs:
         Airline:
           src: airline.json
+        TaxiOperator:
+          src: taxi-operator.json
     Broker:
       src: broker.json
 Event:
   src: event.json
   subs:
+    Action:
+      src: action.json
     Segment:
       src: segment.json
       subs:
@@ -49,6 +57,14 @@ Vehicle:
   subs:
     Aircraft:
       src: aircraft.json
+    Watercraft:
+      src: watercraft.json
+    Train:
+      src: train.json
+    Bus:
+      src: bus.json
+    Taxi:
+      src: taxi.json
 Seating:
   src: seating.json
 Statistics:
