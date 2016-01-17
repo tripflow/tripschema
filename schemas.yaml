@@ -42,8 +42,8 @@ Vehicle:
   subs:
     Aircraft:
       src: aircraft.json
-    AircraftSeating:
-      src: aircraft-seating.json
+Seating:
+  src: seating.json
 Statistics:
   AirlineStatistics:
     src: airline-statistics.json

@@ -34,7 +34,7 @@ All schemas are defined in [JSON Schema](http://json-schema.org) format and can 
   - **[BoardingPass](Reference.md#boardingpass)** ([json](schema/boarding-pass.json))
 - **[Vehicle](Reference.md#vehicle)** ([json](schema/vehicle.json))
   - **[Aircraft](Reference.md#aircraft)** ([json](schema/aircraft.json))
-  - **[AircraftSeating](Reference.md#aircraftseating)** ([json](schema/aircraft-seating.json))
+- **[Seating](Reference.md#seating)** ([json](schema/seating.json))
 - **[Statistics](Reference.md#statistics)** ([json](schema/undefined))
 
 
