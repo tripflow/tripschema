@@ -1,6 +1,6 @@
 {
-  "title": "Booking",
-  "description": "Booking or reservation",
+  "title": "Reservation",
+  "description": "Reservation schema",
   "id": "http://tripschema.org/schema/booking#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",

@@ -1,10 +1,10 @@
 # Tripschema Reference
 
  * [Place](#Place)
- * [Transport Structure](#Transport Structure)
+ * [Gateway](#Gateway)
  * [Airport](#Airport)
  * [Flight](#Flight)
- * [Booking](#Booking)
+ * [Reservation](#Reservation)
 
 ## Place
 
@@ -72,11 +72,11 @@ Property | Type | Description | Example
 null
 ```
 
-## Transport Structure
+## Gateway
 
-Transport Structure Schema
+Gateway - Transport Structure
 
-* [Transport Structure](#Transport Structure)
+* [Gateway](#Gateway)
 
 Property | Type | Description | Example
 ---- | ---- | ---- | ---- | ----
@@ -558,25 +558,25 @@ Property | Type | Description | Example
 }
 ```
 
-## Booking
+## Reservation
 
-Booking or reservation
+Reservation schema
 
-* [Booking](#Booking)
-  * [Booking.ident](#Booking.ident)
-  * [Booking.price](#Booking.price)
-  * [Booking.payments](#Booking.payments)
-  * [Booking.contacts](#Booking.contacts)
-  * [Booking.contacts.name](#Booking.contacts.name)
-  * [Booking.contacts.phones](#Booking.contacts.phones)
+* [Reservation](#Reservation)
+  * [Reservation.ident](#Reservation.ident)
+  * [Reservation.price](#Reservation.price)
+  * [Reservation.payments](#Reservation.payments)
+  * [Reservation.contacts](#Reservation.contacts)
+  * [Reservation.contacts.name](#Reservation.contacts.name)
+  * [Reservation.contacts.phones](#Reservation.contacts.phones)
 
 Property | Type | Description | Example
 ---- | ---- | ---- | ---- | ----
-**ident** | *Object [Booking.ident](#Booking.ident)* | Booking IDs - Booking identificators | `{"pnr":"LSSK8E"}`
+**ident** | *Object [Reservation.ident](#Reservation.ident)* | Booking IDs - Booking identificators | `{"pnr":"LSSK8E"}`
 **status** | *String* | Booking status | `"confirmed"`
-**price** | *Object [Booking.price](#Booking.price)* | Price summary | `{"value":12088,"currency":"HUF"}`
-**payments** | *Array [Object [Booking.payments](#Booking.payments)]* | Payments | `null`
-**contacts** | *Array [Object [Booking.contacts](#Booking.contacts)]* | Contacts | `{"email":"jan.stransky@arnal.cz"}`
+**price** | *Object [Reservation.price](#Reservation.price)* | Price summary | `{"value":12088,"currency":"HUF"}`
+**payments** | *Array [Object [Reservation.payments](#Reservation.payments)]* | Payments | `null`
+**contacts** | *Array [Object [Reservation.contacts](#Reservation.contacts)]* | Contacts | `{"email":"jan.stransky@arnal.cz"}`
 
 #### Example
 ```javascript
@@ -645,7 +645,7 @@ Property | Type | Description | Example
 }
 ```
 
-### Booking.ident
+### Reservation.ident
 
 Booking identificators
 
@@ -660,7 +660,7 @@ Property | Type | Description | Example
   "pnr": "LSSK8E"
 }
 ```
-### Booking.price
+### Reservation.price
 
 Property | Type | Description | Example
 ---- | ---- | ---- | ---- | ----
@@ -675,7 +675,7 @@ Property | Type | Description | Example
   "currency": "HUF"
 }
 ```
-### Booking.payments
+### Reservation.payments
 
 Property | Type | Description | Example
 ---- | ---- | ---- | ---- | ----
@@ -701,14 +701,14 @@ Property | Type | Description | Example
 ```javascript
 null
 ```
-### Booking.contacts
+### Reservation.contacts
 
 Property | Type | Description | Example
 ---- | ---- | ---- | ---- | ----
 **type** | *String* | Type of contact | `null`
 **email** | *String* | Email | `null`
-**name** | *Object [Booking.contacts.name](#Booking.contacts.name)* | Name | `null`
-**phones** | *Array [Object [Booking.contacts.phones](#Booking.contacts.phones)]* | Phones | `null`
+**name** | *Object [Reservation.contacts.name](#Reservation.contacts.name)* | Name | `null`
+**phones** | *Array [Object [Reservation.contacts.phones](#Reservation.contacts.phones)]* | Phones | `null`
 **city** | *String* | City | `null`
 **zip** | *String* | Postal code | `null`
 **country** | *String* | Country | `null`
@@ -722,7 +722,7 @@ Property | Type | Description | Example
 ```javascript
 null
 ```
-### Booking.contacts.name
+### Reservation.contacts.name
 
 Property | Type | Description | Example
 ---- | ---- | ---- | ---- | ----
@@ -737,7 +737,7 @@ Property | Type | Description | Example
 ```javascript
 null
 ```
-### Booking.contacts.phones
+### Reservation.contacts.phones
 
 Property | Type | Description | Example
 ---- | ---- | ---- | ---- | ----

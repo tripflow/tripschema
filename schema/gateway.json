@@ -1,6 +1,6 @@
 {
-  "title": "Transport Structure",
-  "description": "Transport Structure Schema",
+  "title": "Gateway",
+  "description": "Gateway - Transport Structure",
   "id": "http://tripschema.org/schema/gateway#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
