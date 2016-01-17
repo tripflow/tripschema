@@ -38,33 +38,6 @@ All schemas are defined in [JSON Schema](http://json-schema.org) format and can 
 - **[Statistics](Reference.md#statistics)** ([json](schema/undefined))
 
 
-- **[Place](Reference.md#place)** ([json](schema/place.json))
-  - **[Gateway](Reference.md#gateway)** ([json](schema/gateway.json))
-    - **[Airport](Reference.md#airport)** ([json](schema/airport.json))
-    - **RailwayStation**
-    - **Port**
-    - ..
-  - **[Accomodation](Reference.md#accomodation)** ([json](schema/accomodation.json))
-- **Organization**
-  - **[Operator](Reference.md#operator)** ([json](schema/operator.json))
-    - **[Airline](Reference.md#airline)** ([json](schema/airline.json))
-  - **[Broker](Reference.md#broker)** ([json](schema/broker.json))
-- **Event**
-  - **Segment**
-    - **[Flight](Reference.md#flight)** ([json](schema/flight.json))
-  - **Incident**
-- **Document**
-  - **[Reservation](Reference.md#reservation)** ([json](schema/reservation.json))
-  - **BoardingPass** - planned
-- **Vehicle**
-  - **Aircraft**
-  - **AircraftSeating**
-- **VehicleModel**
-  - **AircraftModel**
-- **Statistics**
-  - **AirlineStatistics**
-  - **AirportStatistics**
-
 ## Resources
 
 ### Specifications
